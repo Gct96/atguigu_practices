@@ -25,9 +25,20 @@ class Order{
 	private static Order instance=null;
 	
 	//声明公共的静态的返回当前类对象的方法
+//	public static synchronized Order getInstance() {
+//		if(instance==null) 
+//			instance=new Order();
+//		return instance;
+//	}
 	public static Order getInstance() {
-		if(instance==null) 
-			instance=new Order();
+		//双重检查实现线程安全的单例懒汉式
+		if(instance==null) {
+			synchronized(Bank.class) {
+				if(instance==null)
+					instance=new Order();
+				return instance;	
+			}
+		}
 		return instance;
 	}
 }
