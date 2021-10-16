@@ -29,7 +29,7 @@ public class Designer extends Programmer {
 	
 	@Override
 	public String toString() {
-		return getDetails()+"\t设计师\t"+getStatus().getNAME()+"\t"+bonus+"\t\t"+
+		return getDetails()+"\t设计师\t"+getStatus()+"\t"+bonus+"\t\t"+
 	getEquipment().getDescription();
 	}
 	

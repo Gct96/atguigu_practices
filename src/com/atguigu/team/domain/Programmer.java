@@ -49,7 +49,7 @@ public class Programmer extends Employee {
 	
 	@Override
 	public String toString() {
-		return getDetails()+"\t程序员\t"+status.getNAME()+"\t\t\t"+equipment.
+		return getDetails()+"\t程序员\t"+getStatus()+"\t\t\t"+equipment.
 				getDescription();
 	}
 	
